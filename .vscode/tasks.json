@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [       
+        {
+            "label": "BuildRun",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+               "-t:Run",
+               "-f:net8.0-android",
+               "-p:Configuration=${input:configuration}",
+               "-p:AndroidAttachDebugger=true",
+               "-p:AndroidSdkDirectory=$ANDROID_SDK_HOME",
+               "-p:JavaSdkDirectory=$JAVA_HOME",
+               "-p:AcceptAndroidSDKLicenses=True",
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ],
+    "inputs": [        
+        {
+            "id": "configuration",
+            "type": "pickString",
+            "default": "Debug",
+            "description": "Select MSBuild configuration",
+            "options": [
+                "Debug",
+                "Release"
+            ]
+        }
+    ]
+}
