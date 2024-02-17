@@ -16,9 +16,11 @@
         <ShellContent Title="Orçamento Doméstico" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Configurações" Icon="settings.svg">
+    <FlyoutItem Title="Usuário" Icon="user.svg">
         <ShellContent Title="Login Usuário" Icon="user.svg" ContentTemplate="{DataTemplate pages:UserLoginPage}"/>
+    </FlyoutItem>
 
+    <FlyoutItem Title="Transações" Icon="money.svg">
         <ShellContent Title="Transações Registradas" Icon="money.svg" ContentTemplate="{DataTemplate pages:RegisteredTransactionsPage}"/>
     </FlyoutItem>
 
